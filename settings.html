@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Settings</title>
+
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="Settings">
+        <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=BBH Bartle' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <meta name="keywords" content="OneWorld Settings">
+        <meta name="author" content="Rohan Shailesh - Nakul Sandeep Varma">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+
+        <style>
+
+            html.high-contrast body{
+                background-color: #aead0a;
+            }
+
+            html.high-contrast .navbar ul{
+                background-color: #272011;
+            }
+
+            html.high-contrast .navbar a{
+                color: rgb(255, 255, 255);
+            }
+
+            html.high-contrast .navbar #notoneworld:hover {
+                text-decoration: underline;
+            }
+
+            html.high-contrast .settingsBox{
+                background-color: rgb(15, 0, 0);
+            }
+
+            html.high-contrast .titleSet p, html.high-contrast .titleSet h3 {
+                color: white;
+            }
+
+            html.high-contrast .settingOptions h4, html.high-contrast .settingOptions p{
+                color: white;
+            }
+
+        </style>
+    </head>
+
+    <body class='bodyOfSettings'>
+        
+
+        <nav class="navbar">
+            <ul>
+                <li id="oneworld"><a href="dashBoard.html" id="oneWorldA">OneWorld</a></li>
+                <li><a href="onPage.html" id="notoneworld">Features</a></li>
+                <li><a href="immerealm.html" id="notoneworld">Immerealm™</a></li>
+                <li><a href="dashBoard.html" id="notoneworld">Feedback</a></li>
+                <li><a href="settings.html" id="notoneworld">Settings</a></li>
+            </ul>
+        </nav>
+       
+        <div class="settingsBox">
+            <div class="topSettingTitle">
+                <div class="titleSet">
+                <h3>Settings</h3>
+                <p>OneWorld offers many settings that can adjust the website for users with impairments.
+                    Below are the listed settings.
+                </p>
+                </div>
+                <br>
+                <hr>
+
+                <div class="settingOptions">
+                    <h4>Larger Text</h4>
+                    <label class="switch">
+                        <input type="checkbox" id="largeTextToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <hr></hr>
+
+                <div class="settingOptions">
+                    <h4>High Contrast</h4>
+                    <label class="switch">
+                        <input type="checkbox" id="highContrastToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <hr>
+
+                <div class="settingOptions">
+                    <h4>Dyslexic Font</h4>
+                    <label class="switch">
+                        <input type="checkbox" id="dyslexicFontToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <hr>
+
+                <div class="settingOptions">
+                    <h4>Reduce Motion</h4>
+                    <label class="switch">
+                        <input type="checkbox" id="reduceMotionToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <hr>
+
+                <div class="settingOptions">
+                    <h4>Button Sounds</h4>
+                    <label class="switch">
+                        <input type="checkbox" id="buttonSoundToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <hr>
+
+                <div class="settingOptions">
+                    <h4>Audio Navigation</h4>
+                    <p><i>*Need to click on page before program will read</i></p>
+                    <label class="switch">
+                        <input type="checkbox" id="tts-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <!--All settings go above this-->
+                <div class="LogOut">
+                    <button onclick="logOut()">Log Out</button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <script>
+
+            const ttstoggle = document.querySelector('#tts-toggle');
+
+            ttstoggle.addEventListener('change', () => {
+                localStorage.setItem('ttsEnabled', ttstoggle.checked);
+            });
+
+            ttstoggle.checked = localStorage.getItem('ttsEnabled') === 'true'
+
+        </script>
+
+        <script>
+            function logOut() {
+                if (confirm('Are you sure you want to log out?')) {
+                    localStorage.removeItem('currentUser');
+                    window.location.href = 'login.html'
+                }
+            }
+        </script>
+
+        <script src="applySettings.js"></script>
+        <script src="hoverText.js"></script>
+        <script src="highcontrast.js"></script>
+        <script src="largeText.js"></script>
+        <script src="dyslexicfont.js"></script>
+        <script src="reduceMotion.js"></script>
+        <script src="buttonSounds.js"></script>
+
+    </body>
+</html>

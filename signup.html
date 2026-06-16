@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up</title>
+
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="Sign Up Page">
+        <link href='https://fonts.googleapis.com/css?family=BBH Bartle' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <meta name="keywords" content="OneWorld Sign Up">
+        <meta name="author" content="Rohan Shailesh - Nakul Sandeep Varma">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body style="background-color: #0a0f1e;">
+        
+
+        <nav class="navbar">
+            <ul>
+                <li id="oneworld"><a href="dashBoard.html" id="oneWorldA">OneWorld</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <form>
+                <div class="signUp">
+
+                    <h3>OneWorld</h3>
+                    <h4>Sign Up Now</h4>
+
+                    <div id="laneInput">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" placeholder="Enter First Name" required>
+                    </div>
+
+                    <br/>
+
+                    <div id="laneInput">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" placeholder="Enter Last Name" required>
+                    </div>
+
+                    <br/>
+
+                    <div id="laneInput">
+                        <label for="pass">Password:</label>
+                        <input type="password" id="pass" name="pass" maxlength="12" autocomplete="new-password" required>
+                    </div>
+
+                    <br/>
+
+                    <div id="laneInput">
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
+                    </div>
+
+                    <br/>
+
+                    <div id="laneInputCheck">
+                        <label for="subscribe" id="subscribe">Agree to terms and conditions </label>
+                        <input type="checkbox" id="subscribe" name="subscribe" required>
+                    </div>
+
+                    <br/>
+
+                    <button type="button" id="signUpButton" onclick="handleSignUp()">Submit</button>
+
+                    <p>Coming back? <a href="login.html"> Log In</a></p>
+
+                </div>
+            </form>
+
+        </main>
+       
+        <script>
+
+            function handleSignUp() {
+                const fName = document.getElementById('fname').value.trim();
+                const lName = document.getElementById('lname').value.trim();
+                const userEmail = document.getElementById("email").value.trim();
+                const password = document.getElementById('pass').value.trim();
+
+                const accounts = JSON.parse(localStorage.getItem('accounts') || '[]')
+
+                const alreadyExists = accounts.find(acc => acc.email === userEmail);
+                if (alreadyExists) {
+                    alert('An account with this email already exists.');
+                    return;
+                }
+
+                accounts.push({fName, lName, email: userEmail, password});
+                localStorage.setItem('accounts', JSON.stringify(accounts));
+                localStorage.setItem('currentUser', JSON.stringify({fName, lName, email: userEmail, }));
+
+                window.location.href = 'dashBoard.html';
+            };
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Immerealm Home</title>
+
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+        <meta name="description" content="Immerealm Testing Page">
+        <link href='https://fonts.googleapis.com/css?family=BBH Bartle' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <meta name="keywords" content="OneWorld Immerealm">
+        <meta name="author" content="Rohan Shailesh - Nakul Sandeep Varma">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+        <style>
+
+            html.high-contrast body{
+                background-color: #aead0a;
+            }
+
+            html.high-contrast .navbar ul{
+                background-color: black;
+            }
+
+            html.high-contrast .navbar a{
+                background-color: rgb(255, 255, 255);
+            }
+
+            html.high-contrast .navbar #notoneworld:hover {
+                background-color: #333;
+                text-decoration: underline;
+            }
+
+            html.high-contrast footer {
+                background-color: rgb(127, 127, 127);
+            }
+
+            html.high-contrast #tryNowButton {
+                color: black;
+                background-color: white;
+            }
+
+            html.high-contrast #tryNowButton:hover {
+                color: black;
+                background-color: rgb(214, 214, 214);
+            }
+
+            html.high-contrast #tryNowButton:active {
+                color: white;
+                background-color: black(214, 214, 214);
+                border: white;
+            }
+
+            html.high-contrast aside {
+                background-color: rgb(29, 29, 29);
+                color: white;
+            }
+
+            html.high-contrast .titleofDash {
+                background-color: rgb(29, 29, 29);
+                color: white;
+            }
+
+            html.high-contrast .visual, html.high-contrast .welcome {
+                background-color: #aead0a;
+                color: white;
+            }
+
+            html.high-contrast .dashBoardCover {
+                background-color: rgb(14, 14, 14);
+            }
+
+            html.high-contrast .tooldesc {
+                background-color: #aead0a;
+            }
+
+            html.high-contrast .tooldesc:hover {
+                background-color: #c4c40a; 
+            }
+
+            html.high-contrast .annoyer {
+                color: #c4c40a;
+            }
+
+            html.high-contrast .realDesc h3, html.high-contrast .realDesc h4, html.high-contrast .realDesc p {
+                color: white;
+            }
+
+        </style>
+
+    </head>
+
+    <body class="immerealmBody">
+        
+
+        <nav class="navbar">
+            <ul>
+                <li id="oneworld"><a href="dashBoard.html" id="oneWorldA">OneWorld</a></li>
+                <li><a href="onPage.html" id="notoneworld">Features</a></li>
+                <li><a href="immerealm.html" id="notoneworld">Immerealm™</a></li>
+                <li><a href="dashBoard.html" id="notoneworld">Feedback</a></li>
+                <li><a href="settings.html" id="notoneworld">Settings</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <div class="immerealmpagebox">
+
+                <div class="text">
+                    <p class="animate" id="topThings">Testing Software by OneWorld</p>
+                    <h3 class="animate" style="font-size: 5rem;">Immerealm</h3>
+                    <p class="animate" style="font-size: 48px;"><strong>Know Your Senses.</strong></p>
+                    <p class="animate" style="font-size: 48px;"><strong>Know Your Health.</strong></p>
+                    <p class="animate" style="font-size: 32px; color: grey;">Clinically designed hearing & visual tests with instant reports.</p>
+                </div>
+
+            </div>
+
+        </main>        
+
+        <div class="backgroundMiddle">
+
+            <div class="infoStat">
+                <h3 class="animate">12</h3>
+                <p class="animate" style="font-size: 32px; color: grey;">Available Tests</p>
+            </div>
+
+            <div class="infoStat">
+                <h3 class="animate">~1 min</h3>
+                <p class="animate" style="font-size: 32px; color: grey;">Test Duration</p>
+            </div>
+
+            <div class="infoStat">
+                <h3 class="animate">PDF/Email</h3>
+                <p class="animate" style="font-size: 32px; color: grey;">Report Types</p>
+            </div>
+
+        </div>
+
+        <div class="boxmaker2">
+
+            <div class="contentsOfBox">
+        
+                <div class="filters">
+                    <p>Filters:</p>
+                    <button class="filter active" onclick="setFilter(this, 'all')">All</button>
+                    <button class="filter" onclick="setFilter(this, 'hearing')">Hearing</button>
+                    <button class="filter" onclick="setFilter(this, 'visual')">Visual</button>
+                </div>
+
+                <div class="backgroundofQuizBox">
+
+                    <div class="quizBox" data-category="hearing">
+                        <div class="topBar">
+                            <i class="ti ti-ear" id="tiEar"></i>
+                            <p class="identifier" id="hear">Hearing</p>
+                        </div>
+                        <p id="titleOfQuiz">Hearing Test #1</p>
+                        
+                        <p id="desc">Check current ear function</p>
+
+                        <div class="iconDesc">
+                            <p id="desc"><i class="ti ti-list"></i>4 questions</p>
+                            <p id="desc"><i class="ti ti-clock"></i>~1 min</p>
+                        </div>
+
+                        <form action="immerealmHearing.html">
+                            <button id="takeTestButton" class="hearTestBtn">Take Test</button>
+                        </form>
+
+                    </div>
+
+                    <div class="quizBox" data-category="visual">
+                        <div class="topBar">
+                            <i class="ti ti-eye" id="tiEye"></i>
+                            <p class="identifier" id="vis">Visual</p>
+                        </div>
+                        <p id="titleOfQuiz">Visual Test #1</p>
+                        
+                        <p id="desc">Check current eye function</p>
+
+                        <div class="iconDesc">
+                            <p id="desc"><i class="ti ti-list"></i>4 questions</p>
+                            <p id="desc"><i class="ti ti-clock"></i>~1 min</p>
+                        </div>
+
+                        <form action="immerealmVisual.html">
+                            <button id="takeTestButton" class="visTestBtn">Take Test</button>
+                        </form>
+
+                    </div>
+
+                    <div class="quizBox" data-category="visual">
+                        <div class="topBar">
+                            <i class="ti ti-eye" id="tiEye"></i>
+                            <p class="identifier" id="vis">Visual</p>
+                        </div>
+                        <p id="titleOfQuiz">Visual Test #2</p>
+                        
+                        <p id="desc">Check current eye function</p>
+
+                        <div class="iconDesc">
+                            <p id="desc"><i class="ti ti-list"></i>4 questions</p>
+                            <p id="desc"><i class="ti ti-clock"></i>~1 min</p>
+                        </div>
+
+                        <form action="immerealmVisual.html">
+                            <button id="takeTestButton" class="visTestBtn">Take Test</button>
+                        </form>
+
+                    </div>
+
+                    <div class="quizBox" data-category="hearing">
+                        <div class="topBar">
+                            <i class="ti ti-ear" id="tiEar"></i>
+                            <p class="identifier" id="hear">Hearing</p>
+                        </div>
+                        <p id="titleOfQuiz">Hearing Test #2</p>
+                        
+                        <p id="desc">Check current ear function</p>
+
+                        <div class="iconDesc">
+                            <p id="desc"><i class="ti ti-list"></i>4 questions</p>
+                            <p id="desc"><i class="ti ti-clock"></i>~1 min</p>
+                        </div>
+
+                        <form action="immerealmHearing.html">
+                            <button id="takeTestButton" class="hearTestBtn">Take Test</button>
+                        </form>
+
+                    </div>
+
+                    <div class="quizBox" data-category="hearing">
+                        <div class="topBar">
+                            <i class="ti ti-ear" id="tiEar"></i>
+                            <p class="identifier" id="hear">Hearing</p>
+                        </div>
+                        <p id="titleOfQuiz">Hearing Test #3</p>
+                        
+                        <p id="desc">Check current ear function</p>
+
+                        <div class="iconDesc">
+                            <p id="desc"><i class="ti ti-list"></i>4 questions</p>
+                            <p id="desc"><i class="ti ti-clock"></i>~1 min</p>
+                        </div>
+
+                        <form action="immerealmHearing.html">
+                            <button id="takeTestButton" class="hearTestBtn">Take Test</button>
+                        </form>
+
+                    </div>
+
+                    <div class="quizBox" data-category="visual">
+                        <div class="topBar">
+                            <i class="ti ti-eye" id="tiEye"></i>
+                            <p class="identifier" id="vis">Visual</p>
+                        </div>
+                        <p id="titleOfQuiz">Visual Test #3</p>
+                        
+                        <p id="desc">Check current eye function</p>
+
+                        <div class="iconDesc">
+                            <p id="desc"><i class="ti ti-list"></i>4 questions</p>
+                            <p id="desc"><i class="ti ti-clock"></i>~1 min</p>
+                        </div>
+
+                        <form action="immerealmVisual.html">
+                            <button id="takeTestButton" class="visTestBtn">Take Test</button>
+                        </form>
+
+                    </div>
+
+                    <div class="quizBox" data-category="hearing">
+                        <div class="topBar">
+                            <i class="ti ti-ear" id="tiEar"></i>
+                            <p class="identifier" id="hear">Hearing</p>
+                        </div>
+                        <p id="titleOfQuiz">Hearing Practice #1</p>
+                        
+                        <p id="desc">Check current ear function</p>
+
+                        <div class="iconDesc">
+                            <p id="desc"><i class="ti ti-list"></i>4 questions</p>
+                            <p id="desc"><i class="ti ti-clock"></i>~1 min</p>
+                        </div>
+
+                        <form action="immerealmHearing.html">
+                            <button id="takeTestButton" class="hearTestBtn">Take Test</button>
+                        </form>
+
+                    </div>
+
+                    <div class="quizBox" data-category="hearing">
+                        <div class="topBar">
+                            <i class="ti ti-ear" id="tiEar"></i>
+                            <p class="identifier" id="hear">Hearing</p>
+                        </div>
+                        <p id="titleOfQuiz">Hearing Practice #2</p>
+                        
+                        <p id="desc">Check current ear function</p>
+
+                        <div class="iconDesc">
+                            <p id="desc"><i class="ti ti-list"></i>4 questions</p>
+                            <p id="desc"><i class="ti ti-clock"></i>~1 min</p>
+                        </div>
+
+                        <form action="immerealmHearing.html">
+                            <button id="takeTestButton" class="hearTestBtn">Take Test</button>
+                        </form>
+
+                    </div>
+
+                    <div class="quizBox" data-category="hearing">
+                        <div class="topBar">
+                            <i class="ti ti-ear" id="tiEar"></i>
+                            <p class="identifier" id="hear">Hearing</p>
+                        </div>
+                        <p id="titleOfQuiz">Hearing Practice #3</p>
+                        
+                        <p id="desc">Check current ear function</p>
+
+                        <div class="iconDesc">
+                            <p id="desc"><i class="ti ti-list"></i>4 questions</p>
+                            <p id="desc"><i class="ti ti-clock"></i>~1 min</p>
+                        </div>
+
+                        <form action="immerealmHearing.html">
+                            <button id="takeTestButton" class="hearTestBtn">Take Test</button>
+                        </form>
+
+                    </div>
+
+                    <div class="quizBox" data-category="visual">
+                        <div class="topBar">
+                            <i class="ti ti-eye" id="tiEye"></i>
+                            <p class="identifier" id="vis">Visual</p>
+                        </div>
+                        <p id="titleOfQuiz">Visual Practice #1</p>
+                        
+                        <p id="desc">Check current eye function</p>
+
+                        <div class="iconDesc">
+                            <p id="desc"><i class="ti ti-list"></i>4 questions</p>
+                            <p id="desc"><i class="ti ti-clock"></i>~1 min</p>
+                        </div>
+
+                        <form action="immerealmVisual.html">
+                            <button id="takeTestButton" class="visTestBtn">Take Test</button>
+                        </form>
+
+                    </div>
+
+                    <div class="quizBox" data-category="visual">
+                        <div class="topBar">
+                            <i class="ti ti-eye" id="tiEye"></i>
+                            <p class="identifier" id="vis">Visual</p>
+                        </div>
+                        <p id="titleOfQuiz">Visual Practice #2</p>
+                        
+                        <p id="desc">Check current eye function</p>
+
+                        <div class="iconDesc">
+                            <p id="desc"><i class="ti ti-list"></i>4 questions</p>
+                            <p id="desc"><i class="ti ti-clock"></i>~1 min</p>
+                        </div>
+
+                        <form action="immerealmVisual.html">
+                            <button id="takeTestButton" class="visTestBtn">Take Test</button>
+                        </form>
+
+                    </div>
+
+                    <div class="quizBox" data-category="visual">
+                        <div class="topBar">
+                            <i class="ti ti-eye" id="tiEye"></i>
+                            <p class="identifier" id="vis">Visual</p>
+                        </div>
+                        <p id="titleOfQuiz">Visual Practice #3</p>
+                        
+                        <p id="desc">Check current eye function</p>
+
+                        <div class="iconDesc">
+                            <p id="desc"><i class="ti ti-list"></i>4 questions</p>
+                            <p id="desc"><i class="ti ti-clock"></i>~1 min</p>
+                        </div>
+
+                        <form action="immerealmVisual.html">
+                            <button id="takeTestButton" class="visTestBtn">Take Test</button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+
+
+
+
+
+        <script src="hoverText.js"></script>
+        <script src="highcontrast.js"></script>
+        <script src="sideBarHide.js"></script>
+
+        <script>
+            function setFilter(clicked, category) {
+                document.querySelectorAll('.filter').forEach(btn => btn.classList.remove('active'));
+                clicked.classList.add('active');
+
+                document.querySelectorAll('.quizBox').forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none'
+                    }
+                });
+            }
+
+        </script>
+        <script src="applySettings.js"></script>
+
+    </body>
+</html>

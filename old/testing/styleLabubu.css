@@ -1,0 +1,518 @@
+body {
+    margin: 0px;
+}
+
+main {
+    margin: 0px;
+}
+
+h3 {
+    font-family: BBH Bartle;
+    font-size: 3rem;
+}
+
+p {
+    font-family: Inter;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul {
+    margin:0px;
+    padding:0px;
+    background-color: rgb(255, 255, 255);
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.navbar a{
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    margin-right: 50px;
+    transition-duration: 0.5s;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+.navbar #notoneworld:hover {
+    background-color: #ccc;
+    text-decoration: underline;
+}
+
+.navbar #notoneworld:active {
+    text-decoration: underline;
+}
+
+.navbar #oneworld:hover {
+    transform: scale(1.05);
+}
+
+.navbar li{
+    float: right;
+    font-size: 25px;
+    font-family: Inter;
+}
+
+.navbar #oneworld{
+    font-family: BBH Bartle;
+    float: left;
+    margin-left: 5vh;
+    transition: 0.5s;
+}
+
+.mainpagebox {
+    width: 100%;
+    height: 70vh;
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ),
+        url(images/deaf.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.text {
+    text-align: center;
+    margin-left: 10px;
+    font-family: BBH Bartle;
+    transform: translateY(-100px);
+    letter-spacing: 2px;
+}
+
+#indexButton{
+    display: inline-block;
+    height: auto;
+    width: 200px;
+    background-color: black;
+    color: white;
+    font-family: Inter, BBH Bartle;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    border-radius: 8px;
+    border: solid white;
+    outline: none;
+    box-shadow: none;
+    transition-duration: 0.5s;
+    padding: 10px;
+}
+
+#indexButton:hover {
+    background-color: aliceblue;
+    color: black;
+    border: black;
+}
+
+
+.undecided {
+    width: 100%;
+    background-color: #51e2f5;
+    display: inline-block;
+}
+
+.textundecided {
+    width: 40%;
+    margin: 5px;
+    margin-left: 40px;
+}
+
+.textundecided p{
+    word-spacing: 5px;
+    margin-top: -15px;
+    margin-left: 10px;
+}
+
+.authors img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.authors {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 40px;
+    margin-right: 40px;
+    gap: 40px;
+}
+
+.aboutCard {
+    max-width: 600px;
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.aboutCard img{
+    flex-shrink: 0;
+}
+
+.signUp {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    justify-content: space-evenly;
+    height: 80vh;
+    width: 650px;
+    margin: auto;
+    margin-top: 5vh;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 5px black;
+    padding: 10px;
+}
+
+#signUpButton {
+    width: 500px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-family: Inter, BBH Bartle;
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+    border-radius: 60px;
+    border: solid white;
+    outline: none;
+    box-shadow: none;
+    transition-duration: 0.5s;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+#signUpButton:hover {
+    background-color: aliceblue;
+    color: black;
+    border: solid black;
+    transform: scale(1.1);
+    font-size: 1.3rem;
+}
+
+#laneInput {
+    display: grid;
+    font-size: 1.2rem;
+    font-family: Inter;
+    margin: 20px;
+}
+
+#laneInput input{
+    height: 30px;
+    margin-top: 5px;
+}
+
+#laneInput input::placeholder {
+    font-size: 18px;
+    font-family: Inter;
+}
+
+#laneInputCheck {
+    display: flex;
+    font-size: 1.2rem;
+    font-family: Inter;
+    margin: 20px;
+}
+
+#laneInputCheck input {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    margin-left: 7px;
+}
+
+.signUp h3 {
+    text-align: center;
+}
+
+.signUp h4 {
+    text-align: center;
+    font-family: Inter;
+    font-size: 2rem;
+    margin-top: -25px;
+}
+
+.logInNow {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    justify-content: space-evenly;
+    height: 50vh;
+    width: 650px;
+    margin: auto;
+    margin-top: 10vh;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 5px black;
+    padding: 10px;
+}
+
+.logInNow h3 {
+    text-align: center;
+}
+
+.logInNow h4 {
+    text-align: center;
+    font-family: Inter;
+    font-size: 2rem;
+    margin-top: -25px;
+}
+
+.logInNow a{
+    text-align: center;
+    text-decoration: revert;
+    color: purple;
+    font-size: 1.2rem;
+}
+
+.logInNow p{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.signUp a{
+    text-align: center;
+    text-decoration: revert;
+    color: purple;
+    font-size: 1.2rem;
+}
+
+.signUp p{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.gallery {
+    display: inline-block;
+    border: 5px solid black;
+    margin:20px;
+    width: 400px;
+    padding: 30px;
+    height: fit-content;
+    padding-bottom: -20px;
+}
+
+.gallery .description {
+    padding-top: 5px;
+    text-align: center;
+    font-family: Inter;
+    font-size: larger;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.visual {
+    display: flex;
+    align-items: center;
+    height: 900px;
+    background-color: #51e2f5;
+    padding-top: -50px;
+}
+
+.tool-row {
+    display: flex;
+    align-items: center;
+    gap: 260px;
+}
+
+.welcome {
+    background-color: #51e2f5;
+    font-family: BBH Bartle;
+    font-size: 3rem;
+    padding: 20px;
+    padding-top: 30px;
+    padding-left: 50px;
+    border-bottom: 10px solid black;
+}
+
+.tooldesc {
+    display: block;
+    width: 1100px;
+    margin: 180px;
+    box-shadow: 0px 0px 5px black;
+    padding: 40px;
+    border-radius: 16px;
+}
+
+.tooldesc h4{
+    font-size: 1.5rem;
+    font-family: BBH Bartle;
+}
+
+.audible {
+    display: flex;
+    align-items: center;
+    height: 800px;
+    background-color: #ffffff;
+    padding-top: -50px;
+    padding-left: 200px;
+}
+
+.tooldesc2 {
+    display: block;
+    width: 1100px;
+    margin: 60px;
+    text-align: right;
+    box-shadow: 0px 0px 5px black;
+    padding: 40px;
+    border-radius: 16px;
+}
+
+.tooldesc2 h4{
+    font-size: 1.5rem;
+    font-family: BBH Bartle;
+}
+
+.tool-row2 {
+    display: flex;
+    align-items: center;
+    gap: 450px;
+}
+
+.tooldesc p{
+font-size: larger;
+}
+
+.tooldesc2 p{
+font-size: larger;
+}
+
+.visual2 {
+    display: flex;
+    align-items: center;
+    height: 900px;
+    background-color: #51e2f5;
+    padding-top: -50px;
+}
+
+.settingsBox {
+    display: flex;
+    background-color: azure;
+    height: fit-content;
+    max-width: 900px;
+    margin:auto;
+    margin-top: 5vh;
+    border-radius: 50px;
+    padding: 50px;
+}
+
+.topSettingTitle {
+    display: block;
+    padding: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    height: 42.5px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 32.5px;
+    width: 32.5px;
+    left: 5px;
+    bottom: 5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(32.5px);
+    -ms-transform: translateX(32.5px);
+    transform: translateX(32.5px)
+}
+
+.slider {
+    border-radius: 34px;
+}
+
+.slider:before {
+    border-radius: 50%;
+}
+
+.settingOptions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.settingOptions h4{
+    font-family: Inter;
+    font-size: 1.9rem;
+}
+
+hr {
+    margin-top: -10px;
+}
+
+footer {
+    padding-left: 80px;
+    padding: 50px;
+    background-color: gray;
+}
+
+#tryNowButton {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-family: BBH Bartle;
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+    border-radius: 60px;
+    outline: none;
+    box-shadow: none;
+    transition-duration: 0.5s;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+#tryNowButton:hover {
+    background-color: rgb(41, 41, 41);
+    color: rgb(255, 255, 255);
+    transform: scale(1.01);
+    font-size: 1.3rem;
+}

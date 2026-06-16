@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Report</title>
+
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="Report">
+        <link href='https://fonts.googleapis.com/css?family=BBH Bartle' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <meta name="keywords" content="OneWorld | Report">
+        <meta name="author" content="Rohan Shailesh - Nakul Sandeep Varma">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    </head>
+
+    <body class="bodyOfSettings">
+        
+        <nav class="navbar">
+            <ul>
+                <li id="oneworld"><a href="dashBoard.html" id="oneWorldA">OneWorld</a></li>
+                <li><a href="onPage.html" id="notoneworld">Features</a></li>
+                <li><a href="immerealm.html" id="notoneworld">Immerealm™</a></li>
+                <li><a href="dashBoard.html" id="notoneworld">Feedback</a></li>
+                <li><a href="settings.html" id="notoneworld">Settings</a></li>
+            </ul>
+        </nav>
+
+        <div class="boxmaker"> 
+            <div class="contentsOfBox">
+                <div class="quizBoxTitle">
+                    <h3>Testing Report</h3>
+                    <p>This report is based off your statistics in the recent quiz you partook in.</p>
+                    <hr>
+                </div>
+
+                <div class="metrics">
+                    <canvas id="scoreCircle" width="500" height="500"></canvas>
+                    <p id="circleLabel"></p>
+
+                    <div class="word-scoring">
+                        <p>
+                            On your recent test, you scored a <span id="scoreMetric"></span>
+                            out of 4 questions, reaching around the <span id="scorePercentage"></span>th
+                            percentile.
+                        </p>
+
+                        <br>
+
+                        <p>
+                            Your average based on the accuracy of your sentences 
+                            was <span id="scoreAverage"></span>.
+                        </p>
+
+                        <br>
+
+                        <p id="thisCouldMean"></p>
+
+                        <br>
+
+                        <p>For more resources, check below.</p>
+
+                        <br>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="resources">
+
+                    <button class="resourcesBTN" id="createPDFbtn" onclick="createPDF()">Create PDF</button>
+                    <button class="resourcesBTN" id="emailReportBtn" onclick="emailReport()">Email Report</button>
+                    <button class="resourcesBTN" id="browseDoctorsBtn" onclick="window.location.href='https://www.google.com/maps/search/hearing+clinics+near+me'">See a Clinic</button>
+                    <button class="resourcesBTN" id="devicesBtn" onclick="window.location.href='https://www.amazon.com/s?k=hearing+devices'">Shop Devices</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="reporting.js"></script>
+        <script src="applySettings.js"></script>
+    </body>
+</html>

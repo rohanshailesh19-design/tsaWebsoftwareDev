@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="Home Page">
+        <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=BBH Bartle' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <meta name="keywords" content="OneWorld Home">
+        <meta name="author" content="Rohan Shailesh - Nakul Sandeep Varma">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+        <style>
+
+            html.high-contrast body{
+                background-color: #aead0a;
+            }
+
+            html.high-contrast .navbar ul{
+                background-color: black;
+            }
+
+            html.high-contrast .navbar a{
+                background-color: rgb(0, 0, 0);
+            }
+
+            html.high-contrast .navbar #notoneworld:hover {
+                background-color: #333;
+                text-decoration: underline;
+            }
+
+            html.high-contrast footer {
+                background-color: rgb(127, 127, 127);
+            }
+
+            html.high-contrast #tryNowButton {
+                color: black;
+                background-color: white;
+            }
+
+            html.high-contrast #tryNowButton:hover {
+                color: black;
+                background-color: rgb(214, 214, 214);
+            }
+
+            html.high-contrast #tryNowButton:active {
+                color: white;
+                background-color: black(214, 214, 214);
+                border: white;
+            }
+
+            html.high-contrast aside {
+                background-color: rgb(29, 29, 29);
+                color: white;
+            }
+
+            html.high-contrast .titleofDash {
+                background-color: rgb(29, 29, 29);
+                color: white;
+            }
+
+            html.high-contrast .visual, html.high-contrast .welcome {
+                background-color: #aead0a;
+                color: white;
+            }
+
+            html.high-contrast .dashBoardCover {
+                background-color: rgb(14, 14, 14);
+            }
+
+            html.high-contrast .tooldesc {
+                background-color: #aead0a;
+            }
+
+            html.high-contrast .tooldesc:hover {
+                background-color: #c4c40a; 
+            }
+
+            html.high-contrast .annoyer {
+                color: #c4c40a;
+            }
+
+            html.high-contrast .realDesc h3, html.high-contrast .realDesc h4, html.high-contrast .realDesc p {
+                color: white;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar">
+            <ul>
+                <li id="oneworld"><a href="dashBoard.html" id="oneWorldA">OneWorld</a></li>
+                <li><a href="onPage.html" id="notoneworld">Features</a></li>
+                <li><a href="immerealm.html" id="notoneworld">Immerealm™</a></li>
+                <li><a href="#feedbackSection" id="notoneworld">Feedback</a></li>
+                <li><a href="settings.html" id="notoneworld">Settings</a></li>
+            </ul>
+        </nav>
+
+        <div class="welcome">Welcome,<h3 id="nameGreetTop"></h3>!</div>
+
+            <main style="display: flex; align-items: flex-start; padding: 0; margin: 0; position: relative;">
+
+                <button id="toggleSidebar"><</button>
+                <aside>
+                    <h3>Quick Notes</h3>
+                    <div id="sidebarNotes">
+                        <p id="sidebarNoteContent">No notes yet...</p>
+                    </div>
+                </aside>
+
+                <section>
+                    
+                    <div class="dashBoardCovernumber2">
+                        
+                        <div class="helloBox">
+
+                            <div class="greetinHelloBox">
+                                <h3>Hello <span id="nameGreetBot"></span>!</h3>
+                                <p>Welcome to OneWorld! Feel free to scroll around the page to navigate our website.</p>
+                                <br>
+                                <p></p>
+                            </div>
+
+                            <div class="calendar">
+                                <div class="calHeader">
+                                    <button id="prevBtn">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </button>
+                                    <div class='monthYear' id="monthYear"></div>
+                                    <button id="nextBtn">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                                <div class="days">
+                                    <div class="day">Mon</div>
+                                    <div class="day">Tue</div>
+                                    <div class="day">Wed</div>
+                                    <div class="day">Thur</div>
+                                    <div class="day">Fri</div>
+                                    <div class="day">Sat</div>
+                                    <div class="day">Sun</div>
+                                </div>
+                                <div class="dates" id="dates"></div>
+                            </div>
+
+                            <div class="calendarButtonLayout">
+                                <button class="calButton" id="setReminderBtn">Set Reminder</button>
+                                <button class="calButton" id="createHolidayBtn">Create Holiday</button>
+                                <button class="calButton" id="quickNoteBtn">Quick Note</button>
+                            </div>
+
+                            <div id="reminderModal">
+                                <div class="innerModal">
+                                    <h2>Set Reminder</h2>
+                                    <input id="reminderMessage" type="text" placeholder="Message">
+                                    <input id="reminderTime" type="datetime-local">
+                                    <button id="saveReminder">Save</button>
+                                    <button id="closeModal">Cancel</button>
+                                </div>
+                            </div>
+
+                            <div id="holidayModal">
+                                <div class="innerModal">
+                                    <h2>Create Holiday</h2>
+                                    <input id="holidayName" type="text" placeholder="Message">
+                                    <input id="holidayDate" type="date">
+                                    <button id="saveHoliday">Save</button>
+                                    <button id="closeHolidayModal">Cancel</button>
+                                </div>
+                            </div>
+
+                            <div id="dateInfoModal">
+                                <div class="innerModal">
+                                    <div id="dateInfoContent"></div>
+                                    <button id="closeDateInfo" onclick="document.getElementById('dateInfoModal').style.display='none'">Close</button>
+                                </div>
+                            </div>
+
+                            <div id="quickNoteModal">
+                                <div class="innerModal">
+                                    <h2>Quick Notes</h2>
+                                    <textarea id="quickNoteInput" placeholder="Write a note..." rows='5'></textarea>
+                                    <button id="saveQuickNote">Save</button>
+                                    <button id="closeQuickNoteModal">Cancel</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="checkOutFeatures">
+                            <div class="textFeaturesSec">
+                                <h3>Need Help with Something?</h3>
+                                <p>
+                                    Check out our features over on our features and tools page.
+                                    The tools include a text to speech tool, video captioning tool,
+                                    and an audio captioning tool. These tools have been crafted through usage
+                                    Web API's like Speech Synthesis and HTML Media Element API's. Using these
+                                    API's, we can call them with Javascript programs to help us connect it 
+                                    to our website, which gives us the final product many of you see today.
+                                </p>
+                            </div>
+                            <form action="onPage.html">
+                                <button id="checkOut">Features and Tools</button>
+                            </form>
+
+                        </div>
+
+                        <div class="immerealmDash">
+                            <h3>Test your senses</h3>
+                            <p>New OneWorld powered testing software - Immerealm.</p>
+                            <form action="immerealm.html">
+                                <button id="checkOut">Immerealm</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </section>
+            
+            </main>
+
+        <div class="feedbackSection" id="feedbackSection">
+            <h3>Leave Feedback</h3>
+            <p>We'd love to hear what you think!</p>
+            <div class="starRating" id="starRating">
+                <span class="star" data-value="1">*</span>
+                <span class="star" data-value="2">*</span>
+                <span class="star" data-value="3">*</span>
+                <span class="star" data-value="4">*</span>
+                <span class="star" data-value="5">*</span>
+            </div>
+            <textarea id="feedbackInput" placeholder="..." rows="4"></textarea>
+            <button id="sendFeedback" class="calButton">Send Feedback</button>
+        </div>
+
+        <footer>
+            <div class="aboutOurMission">
+                <p style="font-family: BBH Bartle;"><strong>Our Mission</strong></p>
+                <p style="width: 400px; font-size:smaller;">Our goal is to tear down barriers 
+                    and create a world that is more 
+                    accessible for everyone. </p>
+            </div>
+
+            <div class="findUs">
+                <p>NEED TO ADD MORE</p>
+            </div>
+        </footer>
+
+        <div id="toast"></div>
+
+        <script src="userSession.js"></script>
+        <script src="hoverText.js"></script>
+        <script src="highcontrast.js"></script>
+        <script src="sideBarHide.js"></script>
+        <script src="calendar.js"></script>
+        <script src="setReminder.js"></script>
+        <script src="holiday.js"></script>
+        <script src="quickNote.js"></script>
+        <script src="feedback.js"></script>
+
+        <script>
+            const nameGreetTop = document.getElementById('nameGreetTop');
+            const nameGreetBot = document.getElementById('nameGreetBot');
+            
+            nameGreetTop.textContent = currentUser.fName;
+            nameGreetBot.textContent = currentUser.fName;
+        </script>
+        <script src="applySettings.js"></script>
+
+    </body>
+</html>

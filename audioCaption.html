@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Audio Transcription Demo</title>
+
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+        <meta name="description" content="Text To Speech Tool">
+        <link href='https://fonts.googleapis.com/css?family=BBH Bartle' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <meta name="keywords" content="OneWorld Text To Speech Tool">
+        <meta name="author" content="Rohan Shailesh - Nakul Sandeep Varma">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            html.high-contrast body{
+                background-color: #aead0a;
+            }
+
+            html.high-contrast .navbar ul{
+                background-color: black;
+            }
+
+            html.high-contrast .navbar a{
+                background-color: rgb(255, 255, 255);
+            }
+
+            html.high-contrast .navbar #notoneworld:hover {
+                background-color: #333;
+                text-decoration: underline;
+            }
+
+            html.high-contrast footer {
+                background-color: rgb(127, 127, 127);
+            }
+
+            html.high-contrast .boxmaker {
+                background-color: rgb(15, 7, 0);
+            }
+
+            html.high-contrast .topTTSbox {
+                color: white;
+            }
+
+            html.high-contrast #audioUploadBtn, html.high-contrast #audioCaptionUploadBtn{
+                background-color: #F37F20;
+                border: 2px solid white;
+            }
+
+            html.high-contrast #audioFileName, html.high-contrast #audioCaptionFileName {
+                background-color: #292b2b;
+                border: 1px solid white;
+                color: white;
+            }
+
+        </style>
+
+    </head>
+
+    <body class="bodyOfSettings">
+        
+
+        <nav class="navbar">
+            <ul>
+                <li id="oneworld"><a href="dashBoard.html" id="oneWorldA">OneWorld</a></li>
+                <li><a href="onPage.html" id="notoneworld">Features</a></li>
+                <li><a href="immerealm.html" id="notoneworld">Immerealm™</a></li>
+                <li><a href="dashBoard.html" id="notoneworld">Feedback</a></li>
+                <li><a href="settings.html" id="notoneworld">Settings</a></li>
+            </ul>
+        </nav>
+
+
+        <div class="boxmaker">
+            <div class="tts-box">
+
+                <div class="topTTSbox">
+                    <h3>Audio Transcripting Demo</h3>
+                    <p>Upload an audio file plus it's corresponding caption file (.txt) to start.</p>
+                </div>
+
+                <hr>
+                <br>
+                <br>
+
+                <div class="tts-file">
+                    <input type="file" id="audioInput" style="display: none;" accept="audio/*">
+                    <button id="audioUploadBtn">Upload Audio</button>
+                    <span id="audioFileName">No File Chosen</span>
+                </div>
+
+                <div class="audioClass"><audio id="audio" controls></audio></div>
+
+                <div class="tts-file">
+                    <input type="file" id="audioCaptionInput" style="display: none;" accept=".txt">
+                    <button id="audioCaptionUploadBtn">Upload a File</button>
+                    <span id="audioCaptionFileName">No File Chosen</span>
+                </div>
+
+                <div id="audioFileContent"></div>
+
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="aboutOurMission">
+                <p style="font-family: BBH Bartle;"><strong>Our Mission</strong></p>
+                <p style="width: 400px; font-size:smaller;">Our goal is to tear down barriers 
+                    and create a world that is more 
+                    accessible for everyone. </p>
+            </div>
+
+            <div class="findUs">
+                <p>NEED TO ADD MORE</p>
+            </div>
+        </footer>
+
+
+        <script src="hoverText.js"></script>
+        <script src="audioCap.js"></script>
+        <script>
+            const fileInput = document.getElementById('audioInput');
+            const uploadBtn = document.getElementById('audioUploadBtn');
+            const fileNameDisplay = document.getElementById('audioFileName');
+
+            uploadBtn.addEventListener('click', function(){
+                fileInput.click();
+            });
+
+            fileInput.addEventListener('change', function(){
+                if (fileInput.files.length > 0) {
+                    fileNameDisplay.textContent = fileInput.files[0].name;
+                }else {
+                    fileNameDisplay.textContent = "No File Chosen"
+                }
+            })
+
+            const captionFileInput = document.getElementById('audioCaptionInput');
+            const captBtn = document.getElementById('audioCaptionUploadBtn');
+            const captNameDisplay = document.getElementById('audioCaptionFileName');
+
+            captBtn.addEventListener('click', function(){
+                captionFileInput.click();
+            });
+
+            captionFileInput.addEventListener('change', function(){
+                if (captionFileInput.files.length > 0) {
+                    captNameDisplay.textContent = captionFileInput.files[0].name;
+                }else {
+                    captNameDisplay.textContent = "No File Chosen"
+                }
+            })
+        </script>
+        <script src="highcontrast.js"></script>
+        <script src="applySettings.js"></script>
+
+    </body>
+</html>

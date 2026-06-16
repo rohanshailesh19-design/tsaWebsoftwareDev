@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facilities</title>
+
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="Home Page">
+        <link href='https://fonts.googleapis.com/css?family=BBH Bartle' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <meta name="keywords" content="OneWorld Home">
+        <meta name="author" content="Rohan Shailesh - Nakul Sandeep Varma">
+        <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            html.high-contrast body{
+                background-color: #aead0a;
+            }
+
+            html.high-contrast .navbar ul{
+                background-color: black;
+            }
+
+            html.high-contrast .navbar a{
+                background-color: rgb(255, 255, 255);
+            }
+
+            html.high-contrast .navbar #notoneworld:hover {
+                background-color: #333;
+                text-decoration: underline;
+            }
+
+            html.high-contrast footer {
+                background-color: rgb(127, 127, 127);
+            }
+
+            html.high-contrast #tryNowButton {
+                color: black;
+                background-color: white;
+            }
+
+            html.high-contrast #tryNowButton:hover {
+                color: black;
+                background-color: rgb(214, 214, 214);
+            }
+
+            html.high-contrast #tryNowButton:active {
+                color: white;
+                background-color: black(214, 214, 214);
+                border: white;
+            }
+
+            html.high-contrast aside {
+                background-color: rgb(29, 29, 29);
+                color: white;
+            }
+
+            html.high-contrast .titleofDash {
+                background-color: rgb(29, 29, 29);
+                color: white;
+            }
+
+            html.high-contrast .visual, html.high-contrast .welcome {
+                background-color: #aead0a;
+                color: white;
+            }
+
+            html.high-contrast .dashBoardCover {
+                background-color: rgb(14, 14, 14);
+            }
+
+            html.high-contrast .tooldesc {
+                background-color: #aead0a;
+            }
+
+            html.high-contrast .tooldesc:hover {
+                background-color: #c4c40a; 
+            }
+
+            html.high-contrast .annoyer {
+                color: #c4c40a;
+            }
+
+            html.high-contrast .realDesc h3, html.high-contrast .realDesc h4, html.high-contrast .realDesc p {
+                color: white;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar">
+            <ul>
+                <li id="oneworld"><a href="dashBoard.html" id="oneWorldA">OneWorld</a></li>
+                <li><a href="onPage.html" id="notoneworld">Features</a></li>
+                <li><a href="immerealm.html" id="notoneworld">Immerealm™</a></li>
+                <li><a href="dashBoard.html" id="notoneworld">Feedback</a></li>
+                <li><a href="settings.html" id="notoneworld">Settings</a></li>
+            </ul>
+        </nav>
+
+            <main style="display: flex;">
+
+                <aside>
+                    <h3>Tools</h3>
+                    <nav id="toolsNav">
+                        <a href="#tts-section">🔊 Text to Speech</a>
+                        <a href="#video-section">🎥 Video Captions</a>
+                        <a href="#audio-section">🎵 Audio Captions</a>
+                    </nav>
+                </aside>
+
+                <section>
+
+                    <div class="titleofDash"><h3 style="text-align: left; margin: 40px;">Features and Tools</h3></div>
+
+                    <div class="dashBoardCover">
+
+                        <button id="toggleSidebar"><</button>
+
+                        <div class="tool-row" id="tts-section">
+
+                                <div class="tooldesc">
+
+                                    <div class="realDesc">
+                                        <div><h3>TEXT TO SPEECH TOOL<h6 class="annoyer">.</h6></h3></div>
+                                        <h4>Engineered by R. Shailesh.</h4>
+                                        <p>OneWorld’s latest Text-To-Speech tool allows users to enter text files and have them read aloud to them. This feature is geared towards visually impaired individuals and those who suffer from sight problems. Click on the image towards the right to interact with this feature.</p>
+                                        <form action = textToSpeech.html>
+                                            <button id="tryNowButton">Try Now</button>
+                                        </form>
+                                    </div>
+
+                                    <div class="gallery">
+                                        <a>
+                                            <img src="images/tts.png" alt="Text-To-Speech Tool">
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        <div class="tool-row" id="video-section">
+
+                                <div class="tooldesc">
+
+                                    <div class="realDesc">
+                                        <div><h3>VIDEO CAPTIONING TOOL<h6 class="annoyer">.</h6></h3></div>
+                                        <h4>Engineered by N. Varma.</h4>
+                                        <p>OneWorld offers a top-notch, high-quality video captioning tool. With this, users can enter a video file, and the program will return live captioning to go along with this video. This is especially useful for users with hearing difficulties and auditory impairments. To use this feature, click on the image towards the left of the screen.</p>
+                                        <form action="videoCaption.html">
+                                            <button id="tryNowButton">Try Now</button>
+                                        </form>
+                                    </div>
+
+                                    <div class="gallery">
+                                        <a>
+                                            <img src="images/closedc.jpeg" alt="Video Captioning Tool">
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="tool-row" id="audio-section">
+
+                                <div class="tooldesc">
+
+                                    <div class="realDesc">
+                                        <div><h3>AUDIO CAPTIONING TOOL<h6 class="annoyer">.</h6></h3></div>
+                                        <h4>Engineered by N. Varma.</h4>
+                                        <p>Similar to the video captioner, 
+                                            the OneWorld Audio Captioning feature allows for users to enter audio files. 
+                                            These can range from recorded messages, podcasts, audiobooks, etc. 
+                                            After that, the user should enter a text file that goes along with the inputted recording so 
+                                            that the software will have something to caption off of. This feature will mention which 
+                                            specific file types are allowed and prohibited within the webpage. 
+                                            Click on the image towards the right to interact with this feature.</p>
+                                        <form action="audioCaption.html">
+                                            <button id="tryNowButton">Try Now</button>
+                                        </form>
+                                    </div>
+
+                                    <div class="gallery">
+                                        <a>
+                                            <img src="images/audcapper.png" alt="Audio Captioning Tool">
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        
+                        </div>
+                    
+                </section>
+            
+            </main>
+
+        <footer>
+            <div class="aboutOurMission">
+                <p style="font-family: BBH Bartle;"><strong>Our Mission</strong></p>
+                <p style="width: 400px; font-size:smaller;">Our goal is to tear down barriers 
+                    and create a world that is more 
+                    accessible for everyone. </p>
+            </div>
+
+            <div class="findUs">
+                <p>NEED TO ADD MORE</p>
+            </div>
+        </footer>
+
+
+        <script src="hoverText.js"></script>
+        <script src="highcontrast.js"></script>
+        <script src="sideBarHide.js"></script>
+        <script src="applySettings.js"></script>
+
+    </body>
+</html>

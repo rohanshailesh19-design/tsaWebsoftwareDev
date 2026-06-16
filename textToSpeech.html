@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text to Speech Tool</title>
+
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+        <meta name="description" content="Text To Speech Tool">
+        <link href='https://fonts.googleapis.com/css?family=BBH Bartle' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <meta name="keywords" content="OneWorld Text To Speech Tool">
+        <meta name="author" content="Rohan Shailesh - Nakul Sandeep Varma">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            html.high-contrast body{
+                background-color: #aead0a;
+            }
+
+            html.high-contrast .navbar ul{
+                background-color: black;
+            }
+
+            html.high-contrast .navbar a{
+                background-color: rgb(255, 255, 255);
+            }
+
+            html.high-contrast .navbar #notoneworld:hover {
+                background-color: #333;
+                text-decoration: underline;
+            }
+
+            html.high-contrast footer {
+                background-color: rgb(127, 127, 127);
+            }
+
+            html.high-contrast .boxmaker {
+                background-color: rgb(15, 7, 0);
+            }
+
+            html.high-contrast .topTTSbox {
+                color: white;
+            }
+
+            html.high-contrast #uploadBtn{
+                background-color: #F37F20;
+                border: 2px solid white;
+            }
+
+            html.high-contrast #fileName {
+                background-color: #292b2b;
+                border: 1px solid white;
+                color: white;
+            }
+
+            html.high-contrast #ttsButton {
+                background-color: rgb(17, 13, 9);
+                border: 3px solid white;
+                color: white;
+            }
+
+            html.high-contrast #fileContent {
+                background-color: #0f0f0f;
+                color: white;
+            }
+        </style>
+
+    </head>
+
+    <body class="bodyOfSettings">
+        
+
+        <nav class="navbar">
+            <ul>
+                <li id="oneworld"><a href="dashBoard.html" id="oneWorldA">OneWorld</a></li>
+                <li><a href="onPage.html" id="notoneworld">Features</a></li>
+                <li><a href="immerealm.html" id="notoneworld">Immerealm™</a></li>
+                <li><a href="dashBoard.html" id="notoneworld">Feedback</a></li>
+                <li><a href="settings.html" id="notoneworld">Settings</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <div class="boxmaker">
+                <div class="tts-box">
+                    <div class="topTTSbox">
+                        <h3>Text To Speech Demo</h3>
+                        <p>Enter a .txt file and it will be read out to you.</p>
+                    </div>
+                    <hr>
+                    <br>
+                    <br>
+
+                    <div class="tts-file">
+                        <input type="file" id="fileInput" style="display: none;" accept=".txt">
+                        <button id="uploadBtn">Upload a File</button>
+                        <span id="fileName">No File Chosen</span>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="tts-Buttons">
+                        <button id="ttsButton" onclick="readFile()">Read Aloud</button>
+                        <button id="ttsButton" onclick="resumeSpeech()">Resume</button>
+                        <button id="ttsButton" onclick="pauseSpeech()">Pause</button>
+                        <button id="ttsButton" onclick="forceStopSpeech()">End Audio</button>
+                    </div>
+
+                    <div id="fileContent"></div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="aboutOurMission">
+                <p style="font-family: BBH Bartle;"><strong>Our Mission</strong></p>
+                <p style="width: 400px; font-size:smaller;">Our goal is to tear down barriers 
+                    and create a world that is more 
+                    accessible for everyone. </p>
+            </div>
+
+            <div class="findUs">
+                <p>NEED TO ADD MORE</p>
+            </div>
+        </footer>
+
+
+        <script src="hoverText.js"></script>
+        <script src="fileWorker.js"></script>
+        <script src="textToSpeech.js"></script>
+        <script src="highcontrast.js"></script>
+        <script src="applySettings.js"></script>
+
+    </body>
+</html>

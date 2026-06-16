@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="Sign Up Page">
+        <link href='https://fonts.googleapis.com/css?family=BBH Bartle' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <meta name="keywords" content="OneWorld Sign Up">
+        <meta name="author" content="Rohan Shailesh - Nakul Sandeep Varma">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body style="background-color: #0a0f1e;">
+        
+
+        <nav class="navbar">
+            <ul>
+                <li id="oneworld"><a href="index.html" id="oneWorldA">OneWorld</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <form onsubmit="handleLogin(event)">
+                <div class="logInNow">
+
+                    <h3>OneWorld</h3>
+                    <h4>Login Now</h4>
+
+                    <div id="laneInput">
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
+                    </div>
+
+                    <div id="laneInput">
+                        <label for="pass">Password:</label>
+                        <input type="password" id="pass" name="pass" maxlength="12" autocomplete="current-password" required>
+                    </div>
+
+                    <br/>
+                    <br/>
+
+                    <button type="submit" id="signUpButton">Submit</button>
+
+                    <p>New here? <a href="signup.html"> Sign Up</a></p>
+
+                </div>
+            </form>
+
+        </main>
+       
+        <script>
+            
+            function handleLogin(event) {
+                event.preventDefault();
+
+                const userEmail = document.getElementById('email').value.trim();
+                const password = document.getElementById('pass').value.trim();
+                const accounts = JSON.parse(localStorage.getItem('accounts') || '[]');
+                const match = accounts.find(acc => acc.email === userEmail && acc.password === password);
+
+                if (!match) {
+                    alert('Invalid email or password.');
+                    return;
+                }
+
+                localStorage.setItem('currentUser', JSON.stringify({
+                    fName: match.fName,
+                    lName: match.lName,
+                    email: match.email
+                }));
+                window.location.href = 'dashBoard.html'
+            }
+
+        </script>
+
+    </body>
+</html>

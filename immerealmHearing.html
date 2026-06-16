@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OneWorld | Immerealm Hearing Test</title>
+
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="Home Page">
+        <link href='https://fonts.googleapis.com/css?family=BBH Bartle' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <meta name="keywords" content="OneWorld Home">
+        <meta name="author" content="Rohan Shailesh - Nakul Sandeep Varma">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body class="bodyOfSettings">
+        
+        <nav class="navbar">
+            <ul>
+                <li id="oneworld"><a href="dashBoard.html" id="oneWorldA">OneWorld</a></li>
+                <li><a href="onPage.html" id="notoneworld">Features</a></li>
+                <li><a href="immerealm.html" id="notoneworld">Immerealm™</a></li>
+                <li><a href="dashBoard.html" id="notoneworld">Feedback</a></li>
+                <li><a href="settings.html" id="notoneworld">Settings</a></li>
+            </ul>
+        </nav>
+
+        <div class="boxmaker">
+
+            <div class="contentsOfBox">
+
+                <div class="quizBoxTitle">
+                    <h3>Hearing Test</h3>
+                    <p>Write the sentence based on what you can hear.</p>
+                    <p>Include proper punctuation at the end of every sentence.</p>
+                    <hr style="margin: 20px;">
+                </div>
+
+                <br>
+                <br>
+
+                <div class="progressMeter">
+                    <p id="progressMeter"></p>
+                    <div class="progressBarContainer">
+                        <div class="progressBarFill" id="progressBarFill"></div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="testing">
+
+                    <div class="answerArea">
+                        <input type="text" id="answerBox" placeholder="Type Answer Here">
+                    </div>
+
+                    <div class="testingButtons">
+
+                        <button onclick="askSentence(randomSelection)" id="sounder">Play Audio</button>
+
+                        <button onclick="checkAnswer()" id="checktheAnswer">Check Answer</button>
+                    </div>
+
+                    <div class="nextQuestion">
+                        <button onclick="nextQuestion()" id="nextQuestion" style="display: none;">Next Question</button>
+                    </div>
+                    <br>
+
+                    <div class="results">
+                        <p id="results"></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        
+        <script src="hearingSim.js"></script>
+        <script src="applySettings.js"></script>
+    </body>
+</html>
